@@ -1,0 +1,144 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+button {
+  font-family: inherit;
+  font-size: medium;
+  background: #6f38c5;
+  color: white;
+  padding: 0.5em 0.8em;
+  padding-left: 1em;
+  display: flex;
+  align-items: center;
+  border: none;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.2s;
+}
+
+button span {
+  display: block;
+  margin-left: 1em;
+  transition: all 0.3s ease-in-out;
+}
+
+button svg {
+  display: block;
+  transform-origin: center center;
+  transition: transform 0.3s ease-in-out;
+}
+
+button:hover .svg-wrapper {
+  animation: fly-1 0.6s ease-in-out infinite alternate;
+}
+
+button:hover svg {
+  transform: translateX(1.2em) rotate(45deg) scale(1.1);
+}
+
+button:hover span {
+  transform: translateX(5em);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+@keyframes fly-1 {
+  from {
+    transform: translateY(0.1em);
+  }
+
+  to {
+    transform: translateY(-0.1em);
+  }
+}
+
+.task-input {
+  color: azure;
+  border: 2px solid #6f38c5;
+  border-radius: 10px;
+  padding: 7px 25px;
+  background: transparent;
+  width: 450px;
+  height: 45px;
+}
+::placeholder {
+  color: azure;
+}
+.task-input:focus {
+  outline: none;
+  border: 2px solid #87a2fb;
+}
+
+.form-select {
+  border: 2px solid #6f38c5;
+  border-radius: 10px;
+  height: 45px;
+}
+.form-select:focus {
+  border: 2px solid #87a2fb;
+  border-radius: 10px;
+}
+.videoplayer {
+  object-fit: cover;
+  z-index: 10;
+  background-position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.cover {
+  background: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  width: 100%;
+  z-index: 20;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.form-select {
+  background: transparent;
+  color: azure;
+}
+option {
+  background-color: #87a2fb;
+  color: rgb(14, 14, 14);
+}
+th {
+  color: azure;
+}
+td {
+  color: azure;
+}
+/* #tr1:hover {
+  background-color: rgba(135, 162, 251, 0.5);
+}
+#tr2:hover {
+  background-color: rgb(251, 203, 10, 0.5);
+}
+#tr3:hover {
+  background-color: rgb(255, 30, 30, 0.5);
+} */
+
+#table1 {
+  border-left: 1px solid #87a2fb;
+  border-right: 1px solid #87a2fb;
+  border-collapse: separate;
+  border-radius: 20px;
+  width: 100%;
+}
+#table2 {
+  border-left: 1px solid #fbcb0a;
+  border-right: 1px solid #fbcb0a;
+  border-collapse: separate;
+  border-radius: 20px;
+  width: 100%;
+}
+#table3 {
+  border-left: 1px solid #ff1e1e;
+  border-right: 1px solid #ff1e1e;
+  border-collapse: separate;
+  border-radius: 20px;
+  width: 100%;
+}
